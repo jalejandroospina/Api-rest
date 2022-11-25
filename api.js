@@ -4,6 +4,9 @@ const route = require('./routes');
 const app = express(); 
 const PORT = 8080; 
 
+app.use(express.json());
+app.use(express.urlencoded({extenden:true}));
+
 const server = app. listen(PORT,()=>
 {       // en escucha al servidor
     console.log (`Servidor Express en el puerto ${PORT}`);
